@@ -1,7 +1,7 @@
 ############################################# 
 # Development go image + air, for live code reload
 #############################################
-FROM golang:1.15 as development
+FROM golang:1.15 as dev
 WORKDIR /src
 
 # Install Air
