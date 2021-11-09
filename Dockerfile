@@ -1,7 +1,7 @@
 ############################################# 
 # Development go image + air, for live code reload
 #############################################
-FROM golang:1.15 as development
+FROM golang:1.17.3 as development
 WORKDIR /src
 
 # Install Air
@@ -22,7 +22,7 @@ CMD [ "air" ]
 ################################################
 # Build stage
 ################################################
-FROM golang:1.15-alpine3.12 as builder
+FROM golang:1.17.3 as builder
 WORKDIR /src
 
 COPY ./go.mod ./go.sum ./
