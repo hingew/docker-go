@@ -36,7 +36,7 @@ RUN CGO_ENABLED=1 go build -ldflags '-extldflags "-static"' -o /release/app
 ################################################
 # Runtime Image
 ################################################
-FROM alpine:3.12 as runtime
+FROM alpine:3.15.3 as runtime
 
 WORKDIR /app
 COPY --from=builder /release .
